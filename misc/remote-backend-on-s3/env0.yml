@@ -2,5 +2,5 @@ deploy:
   steps:
     terraformInit:
       before:
-        - /opt/tfenv/bin/terraform init -reconfigure
+        - /opt/tfenv/bin/terraform init -reconfigure -backend-config="$ENV0_TERRAFORM_BACKEND_CONFIG"
         - aws s3api create-bucket --bucket env0-tf-remote-backend-bucket --region us-east-1
