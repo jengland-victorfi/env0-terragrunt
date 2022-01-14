@@ -1,8 +1,13 @@
-generate "null_resource" {
-  path = "tg.main.tf"
-  if_exists = "overwrite_terragrunt"
-  contents = <<EOF
-resource "null_resource" "null" {
+include {
+  path = find_in_parent_folders()
 }
-EOF
+
+terraform {
+  source = "${get_parent_terragrunt_dir()}/../..//modules/super"
 }
+
+inputs = {
+  name = "sandy"
+}
+
+
