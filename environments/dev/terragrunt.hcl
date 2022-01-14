@@ -2,12 +2,7 @@ include {
   path = find_in_parent_folders()
 }
 
-terraform {
-  source = "${get_parent_terragrunt_dir()}/../..//modules/super"
+dependency "sandy" {
+  config_path = "${get_terragrunt_dir()}/../sandy"
 }
-
-inputs = {
-  name = "dev-root warm it up"
-}
-
 
