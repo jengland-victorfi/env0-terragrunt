@@ -3,7 +3,7 @@ include {
 }
 
 terraform {
-  source = "./modules/super"
+  source = "${get_parent_terragrunt_dir()}/../..//modules/super"
 }
 
 inputs = {
