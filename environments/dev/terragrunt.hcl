@@ -4,3 +4,6 @@ locals {
   stage = "dev"
 }
 
+dependency "sandy" {
+  config_path = "../sandy"
+}
