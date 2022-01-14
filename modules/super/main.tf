@@ -3,3 +3,7 @@ resource "null_resource" "hello-world" {
     command = "echo 'hello-world ${var.name}'"
   }
 }
+
+output "hello_world" {
+  value = "hello-world ${var.name}"
+}
