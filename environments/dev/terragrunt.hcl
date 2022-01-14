@@ -5,5 +5,5 @@ locals {
 }
 
 dependency "sandy" {
-  config_path = "."
+  config_path = "./sandy/terragrunt.hcl"
 }
