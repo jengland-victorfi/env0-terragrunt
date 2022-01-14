@@ -3,6 +3,6 @@ include {
 }
 
 dependency "sandy" {
-  config_path = "${get_terragrunt_dir()}/../sandy"
+  config_path = "${get_terragrunt_dir()}/sandy"
 }
 
