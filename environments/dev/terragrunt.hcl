@@ -5,5 +5,5 @@ locals {
 }
 
 dependency "sandy" {
-  config_path = "../sandy"
+  config_path = "./sandy"
 }
