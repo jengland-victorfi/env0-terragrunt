@@ -1,8 +1,5 @@
-generate "null_resource" {
-  path = "tg.main.tf"
-  if_exists = "overwrite_terragrunt"
-  contents = <<EOF
-resource "null_resource" "null" {
-}
-EOF
+# Set account-wide variables. These are automatically pulled in to configure the remote state bucket in the root
+# terragrunt.hcl configuration.
+locals {
+  project_name   = "env0-terragrunt"
 }
