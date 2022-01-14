@@ -2,6 +2,12 @@ include {
   path = find_in_parent_folders()
 }
 
-dependencies {
-  paths = ["./sandy"]
+terraform {
+  source = "${get_parent_terragrunt_dir()}/../..//modules/super"
 }
+
+inputs = {
+  name = "dev-root"
+}
+
+
